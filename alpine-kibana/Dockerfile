@@ -1,8 +1,8 @@
-FROM alpine:3.2
+FROM alpine:3.3
 MAINTAINER kost, https://github.com/kost/docker-alpine
 
 # Set environment variables
-ENV KIBANA_VERSION 4.1.1
+ENV KIBANA_VERSION 4.5.0
 ENV PKG_NAME kibana
 ENV PKG_PLATFORM linux-x64
 ENV KIBANA_PKG $PKG_NAME-$KIBANA_VERSION-$PKG_PLATFORM
