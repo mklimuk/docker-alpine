@@ -1,9 +1,9 @@
-FROM jolokia/alpine-jre-8
-MAINTAINER kost, https://github.com/kost/docker-alpine
+FROM anapsix/alpine-java:8
+MAINTAINER mklimuk, https://github.com/mklimuk/docker-alpine
 
 # Set environment variables
 ENV PKG_NAME elasticsearch
-ENV ELASTICSEARCH_VERSION 1.7.1
+ENV ELASTICSEARCH_VERSION 2.3.2
 ENV ELASTICSEARCH_URL https://download.elastic.co/$PKG_NAME/$PKG_NAME/$PKG_NAME-$ELASTICSEARCH_VERSION.tar.gz
 
 # Download Elasticsearch
