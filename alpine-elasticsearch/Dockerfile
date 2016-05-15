@@ -16,7 +16,7 @@ RUN apk update \
     && ln -s /opt/$PKG_NAME-$ELASTICSEARCH_VERSION /opt/$PKG_NAME \
     && rm -rf /tmp/*.tar.gz /var/cache/apk/* \
     && mkdir /var/lib/elasticsearch \
-    && chown -r nobody /var/lib/elasticsearch && chown -r nobody /opt/elasticsearch/plugins
+    && chown -R nobody /var/lib/elasticsearch && chown -R nobody /opt/elasticsearch/plugins
 
 # Add files
 COPY config/elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
