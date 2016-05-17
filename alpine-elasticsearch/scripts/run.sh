@@ -34,16 +34,14 @@ echo "-------------------------------"
 echo "files in volume"
 echo "-------------------------------"
 
-vol=/var/lib/elasticsearch
+vol=/opt/elasticsearch
 
 ls $vol
 
 esopts=""
-if [ -f "$vol/elasticsearch.yml" ]; then
+if [ -d "$vol" ]; then
   esopts="-Des.path.home=$vol";
   echo "setting es.path.home to $vol"
-else
-  echo "[WARNING] missing elasticsearch config. not setting es.path.home to $vol"
 fi
 
 commandopts=""

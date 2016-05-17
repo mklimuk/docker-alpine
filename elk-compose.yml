@@ -1,0 +1,17 @@
+version: "2"
+services:
+  elasticsearch:
+    image: mklimuk/alpine-elasticsearch
+    build: alpine-elasticsearch
+  kibana:
+    image: mklimuk/alpine-kibana
+    build: alpine-kibana
+    ports:
+     - "10080:5601"
+    links:
+     - elasticsearch
+  logstash:
+    image: mklimuk/alpine-logstash
+    build: alpine-logstash
+    links:
+     - elasticsearch
